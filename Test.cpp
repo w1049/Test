@@ -9,8 +9,8 @@ using namespace std;
 vector<string> lines;
 inline void readFile(char* fileName) {
     FILE* f = fopen(fileName, "r");
-    char buf[1000];
-    while (fgets(buf, 1000, f) != NULL) lines.push_back(string(buf));
+    char buf[1024];
+    while (fgets(buf, 1024, f) != NULL) lines.push_back(string(buf));
 }
 inline string getSentence(string inSentence) {
     int pos = inSentence.find(' '),
